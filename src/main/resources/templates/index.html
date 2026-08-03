@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es"
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Restaurante</title>
+
+<link rel="stylesheet"
+th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🍔 Restaurante</h1>
+
+<nav>
+
+<a href="/">Inicio</a>
+
+<a href="/clientes">Clientes</a>
+
+<a href="/mesas">Mesas</a>
+
+<a href="/productos">Productos</a>
+
+<a href="/categorias">Categorías</a>
+
+<a href="/pedidos">Pedidos</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Sistema de Gestión de Restaurante</h2>
+
+<p>
+
+Aplicación desarrollada con Spring Boot y Thymeleaf.
+
+</p>
+
+</section>
+
+<section class="dashboard">
+
+<a class="card" href="/clientes">
+
+<span>👤</span>
+
+<h3>Clientes</h3>
+
+<p>Gestión de clientes.</p>
+
+</a>
+
+<a class="card" href="/mesas">
+
+<span>🪑</span>
+
+<h3>Mesas</h3>
+
+<p>Administración de mesas.</p>
+
+</a>
+
+<a class="card" href="/productos">
+
+<span>🍕</span>
+
+<h3>Productos</h3>
+
+<p>Carta del restaurante.</p>
+
+</a>
+
+<a class="card" href="/categorias">
+
+<span>📂</span>
+
+<h3>Categorías</h3>
+
+<p>Organización de productos.</p>
+
+</a>
+
+<a class="card" href="/pedidos">
+
+<span>📋</span>
+
+<h3>Pedidos</h3>
+
+<p>Gestión de pedidos.</p>
+
+</a>
+
+</section>
+
+<footer>
+
+Restaurante © 2026
+
+</footer>
+
+</body>
+
+</html>

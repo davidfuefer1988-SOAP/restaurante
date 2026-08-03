@@ -1,0 +1,399 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:#d84315;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    flex-wrap:wrap;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+header h1{
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffe082;
+    transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+
+    background:linear-gradient(135deg,#ff7043,#ffb74d);
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 30px;
+
+}
+
+.hero h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+}
+
+/* BOTONES */
+
+.btn{
+
+display:inline-block;
+
+padding:14px 28px;
+
+background:#d84315;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#bf360c;
+
+transform:translateY(-4px);
+
+}
+
+/* DASHBOARD */
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+padding:50px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+transition:.35s;
+
+text-decoration:none;
+
+color:#333;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card span{
+
+font-size:3rem;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+margin-top:50px;
+
+background:#d84315;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+
+justify-content:center;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.hero h2{
+
+font-size:2rem;
+
+}
+
+.dashboard{
+
+padding:20px;
+
+}
+
+}*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:#d84315;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    z-index:999;
+    flex-wrap:wrap;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+header h1{
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffe082;
+    transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+
+    background:linear-gradient(135deg,#ff7043,#ffb74d);
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 30px;
+
+}
+
+.hero h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:1.2rem;
+
+}
+
+/* BOTONES */
+
+.btn{
+
+display:inline-block;
+
+padding:14px 28px;
+
+background:#d84315;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#bf360c;
+
+transform:translateY(-4px);
+
+}
+
+/* DASHBOARD */
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+padding:50px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+text-align:center;
+
+border-radius:20px;
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+transition:.35s;
+
+text-decoration:none;
+
+color:#333;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card span{
+
+font-size:3rem;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+margin-top:50px;
+
+background:#d84315;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+
+justify-content:center;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.hero h2{
+
+font-size:2rem;
+
+}
+
+.dashboard{
+
+padding:20px;
+
+}
+
+}
