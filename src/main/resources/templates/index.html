@@ -9,18 +9,21 @@ xmlns:th="http://www.thymeleaf.org">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Restaurante</title>
+<title>🍔 Restaurante | Spring Boot</title>
 
 <link rel="stylesheet"
 th:href="@{/css/style.css}">
 
 </head>
 
+
 <body>
+
 
 <header>
 
 <h1>🍔 Restaurante</h1>
+
 
 <nav>
 
@@ -38,80 +41,170 @@ th:href="@{/css/style.css}">
 
 </nav>
 
+
 </header>
+
+
 
 <section class="hero">
 
-<h2>Sistema de Gestión de Restaurante</h2>
+
+<h2>
+
+Sistema de Gestión del Restaurante
+
+</h2>
+
 
 <p>
 
-Aplicación desarrollada con Spring Boot y Thymeleaf.
+Administra clientes, mesas, productos y pedidos desde una única aplicación.
 
 </p>
 
+
 </section>
+
+
+
+
 
 <section class="dashboard">
 
-<a class="card" href="/clientes">
+
+
+<a href="/clientes"
+
+class="card">
+
 
 <span>👤</span>
 
+
 <h3>Clientes</h3>
 
-<p>Gestión de clientes.</p>
+
+<p>
+
+Gestiona los clientes registrados.
+
+</p>
+
 
 </a>
 
-<a class="card" href="/mesas">
+
+
+
+<a href="/mesas"
+
+class="card">
+
 
 <span>🪑</span>
 
+
 <h3>Mesas</h3>
 
-<p>Administración de mesas.</p>
+
+<p>
+
+Control de mesas disponibles.
+
+</p>
+
 
 </a>
 
-<a class="card" href="/productos">
+
+
+
+
+<a href="/productos"
+
+class="card">
+
 
 <span>🍕</span>
 
+
 <h3>Productos</h3>
 
-<p>Carta del restaurante.</p>
+
+<p>
+
+Administra la carta del restaurante.
+
+</p>
+
 
 </a>
 
-<a class="card" href="/categorias">
+
+
+
+
+<a href="/categorias"
+
+class="card">
+
 
 <span>📂</span>
 
+
 <h3>Categorías</h3>
 
-<p>Organización de productos.</p>
+
+<p>
+
+Organización de productos.
+
+</p>
+
 
 </a>
 
-<a class="card" href="/pedidos">
+
+
+
+
+<a href="/pedidos"
+
+class="card">
+
 
 <span>📋</span>
 
+
 <h3>Pedidos</h3>
 
-<p>Gestión de pedidos.</p>
+
+<p>
+
+Gestiona los pedidos realizados.
+
+</p>
+
 
 </a>
 
+
+
 </section>
+
+
+
+
 
 <footer>
 
-Restaurante © 2026
+🍔 Restaurante © 2026
 
 </footer>
 
+
+
 </body>
+
 
 </html>

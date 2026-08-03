@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Mesa</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🪑 Mesa</h1>
+
+    </header>
+
+    <section class="form-container">
+
+        <h2 th:text="${mesa.id==0} ?
+
+'➕ Nueva Mesa' :
+
+'✏️ Editar Mesa'">
+
+            Mesa
+
+        </h2>
+
+        <form th:action="${mesa.id==0} ?
+
+@{/mesas/guardar} :
+
+@{/mesas/actualizar}" th:object="${mesa}" method="post">
+
+            <input type="hidden" th:field="*{id}">
+
+            <label>
+
+                Número
+
+            </label>
+
+            <input type="number" th:field="*{numero}" required>
+
+            <label>
+
+                Capacidad
+
+            </label>
+
+            <input type="number" th:field="*{capacidad}" required>
+
+            <button class="btn">
+
+                💾 Guardar mesa
+
+            </button>
+
+        </form>
+
+        <br>
+
+        <a class="btn volver" href="/mesas">
+
+            ⬅ Volver
+
+        </a>
+
+    </section>
+
+</body>
+
+</html>

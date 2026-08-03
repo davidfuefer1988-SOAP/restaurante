@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Cliente</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>👤 Cliente</h1>
+
+    </header>
+
+    <section class="form-container">
+
+        <h2 th:text="${cliente.id==0} ?
+'➕ Nuevo Cliente' :
+'✏️ Editar Cliente'">
+
+            Cliente
+
+        </h2>
+
+        <form th:action="${cliente.id==0} ?
+@{/clientes/guardar} :
+@{/clientes/actualizar}" th:object="${cliente}" method="post">
+
+            <input type="hidden" th:field="*{id}">
+
+            <label>
+
+                Nombre
+
+            </label>
+
+            <input type="text" th:field="*{nombre}" required>
+
+            <label>
+
+                Teléfono
+
+            </label>
+
+            <input type="text" th:field="*{telefono}" required>
+
+            <button class="btn">
+
+                💾 Guardar cliente
+
+            </button>
+
+        </form>
+
+        <a class="btn volver" href="/clientes">
+
+            ⬅ Volver
+
+        </a>
+
+    </section>
+
+</body>
+
+</html>

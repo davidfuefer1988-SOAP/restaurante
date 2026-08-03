@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Pedidos</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>🍔 Restaurante</h1>
+
+
+        <nav>
+
+            <a href="/">Inicio</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/mesas">Mesas</a>
+
+            <a href="/productos">Productos</a>
+
+            <a href="/categorias">Categorías</a>
+
+            <a href="/pedidos">Pedidos</a>
+
+        </nav>
+
+
+    </header>
+
+
+
+    <section class="hero">
+
+
+        <h2>📋 Gestión de Pedidos</h2>
+
+
+        <p>
+
+            Control de pedidos realizados.
+
+        </p>
+
+
+
+        <a class="btn" href="/pedidos/nuevo">
+
+            ➕ Nuevo pedido
+
+        </a>
+
+
+    </section>
+
+
+
+
+    <section class="table-container">
+
+
+        <table>
+
+
+            <thead>
+
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Cliente</th>
+
+                    <th>Mesa</th>
+
+                    <th>Producto</th>
+
+                    <th>Cantidad</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+
+            </thead>
+
+
+
+
+            <tbody>
+
+
+                <tr th:each="pedido:${pedidos}">
+
+
+                    <td th:text="${pedido.id}"></td>
+
+
+                    <td th:text="${pedido.cliente.nombre}"></td>
+
+
+                    <td th:text="${pedido.mesa.numero}"></td>
+
+
+                    <td th:text="${pedido.producto.nombre}"></td>
+
+
+                    <td th:text="${pedido.cantidad}"></td>
+
+
+
+
+                    <td>
+
+
+                        <a class="btn delete" th:href="@{/pedidos/eliminar/{id}(id=${pedido.id})}">
+
+                            🗑️ Eliminar
+
+                        </a>
+
+
+                    </td>
+
+
+                </tr>
+
+
+            </tbody>
+
+
+        </table>
+
+
+    </section>
+
+
+
+
+    <footer>
+
+        Restaurante © 2026
+
+    </footer>
+
+
+
+</body>
+
+
+</html>

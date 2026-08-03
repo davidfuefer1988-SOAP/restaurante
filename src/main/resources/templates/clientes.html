@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Clientes</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🍔 Restaurante</h1>
+
+        <nav>
+
+            <a href="/">Inicio</a>
+
+            <a href="/clientes">Clientes</a>
+
+            <a href="/mesas">Mesas</a>
+
+            <a href="/productos">Productos</a>
+
+            <a href="/categorias">Categorías</a>
+
+            <a href="/pedidos">Pedidos</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <h2>👤 Gestión de Clientes</h2>
+
+        <p>
+
+            Administración de clientes.
+
+        </p>
+
+        <a class="btn" href="/clientes/nuevo">
+
+            ➕ Nuevo cliente
+
+        </a>
+
+    </section>
+
+    <section class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Nombre</th>
+
+                    <th>Teléfono</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr th:each="cliente : ${clientes}">
+
+                    <td th:text="${cliente.id}"></td>
+
+                    <td th:text="${cliente.nombre}"></td>
+
+                    <td th:text="${cliente.telefono}"></td>
+
+                    <td>
+
+                        <a class="btn" th:href="@{/clientes/editar/{id}(id=${cliente.id})}">
+
+                            ✏️ Editar
+
+                        </a>
+
+                        <a class="btn delete" th:href="@{/clientes/eliminar/{id}(id=${cliente.id})}">
+
+                            🗑️ Eliminar
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <footer>
+
+        Restaurante © 2026
+
+    </footer>
+
+</body>
+
+</html>

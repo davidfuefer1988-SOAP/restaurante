@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Categoría</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>📂 Categoría</h1>
+
+    </header>
+
+
+
+
+    <section class="form-container">
+
+
+        <h2 th:text="${categoria.id==0} ?
+
+'➕ Nueva Categoría' :
+
+'✏️ Editar Categoría'">
+
+            Categoría
+
+        </h2>
+
+
+
+
+        <form th:action="${categoria.id==0} ?
+
+@{/categorias/guardar} :
+
+@{/categorias/actualizar}" th:object="${categoria}" method="post">
+
+
+
+            <input type="hidden" th:field="*{id}">
+
+
+
+
+
+            <label>
+
+                Nombre
+
+            </label>
+
+
+            <input type="text" th:field="*{nombre}" required>
+
+
+
+
+
+            <label>
+
+                Descripción
+
+            </label>
+
+
+            <input type="text" th:field="*{descripcion}" required>
+
+
+
+
+
+            <button class="btn">
+
+                💾 Guardar categoría
+
+            </button>
+
+
+
+        </form>
+
+
+
+        <br>
+
+
+
+        <a class="btn volver" href="/categorias">
+
+            ⬅ Volver
+
+        </a>
+
+
+    </section>
+
+
+</body>
+
+</html>

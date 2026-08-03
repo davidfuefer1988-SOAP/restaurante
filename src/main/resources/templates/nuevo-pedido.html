@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Nuevo Pedido</title>
+
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <header>
+
+        <h1>📋 Nuevo Pedido</h1>
+
+    </header>
+
+
+
+    <section class="form-container">
+
+
+
+        <form action="/pedidos/guardar" method="post">
+
+
+            <label>
+
+                Cliente
+
+            </label>
+
+
+            <select name="clienteId">
+
+
+                <option th:each="cliente:${clientes}" th:value="${cliente.id}" th:text="${cliente.nombre}">
+
+                </option>
+
+
+            </select>
+
+
+
+
+            <label>
+
+                Mesa
+
+            </label>
+
+
+            <select name="mesaId">
+
+
+                <option th:each="mesa:${mesas}" th:value="${mesa.id}" th:text="${mesa.numero}">
+
+                </option>
+
+
+            </select>
+
+
+
+
+            <label>
+
+                Producto
+
+            </label>
+
+
+            <select name="productoId">
+
+
+                <option th:each="producto:${productos}" th:value="${producto.id}" th:text="${producto.nombre}">
+
+                </option>
+
+
+            </select>
+
+
+
+
+            <label>
+
+                Cantidad
+
+            </label>
+
+
+            <input type="number" name="cantidad" required>
+
+
+
+            <button class="btn">
+
+                💾 Guardar pedido
+
+            </button>
+
+
+
+        </form>
+
+
+
+        <br>
+
+
+        <a class="btn volver" href="/pedidos">
+
+            ⬅ Volver
+
+        </a>
+
+
+
+    </section>
+
+
+</body>
+
+
+</html>
