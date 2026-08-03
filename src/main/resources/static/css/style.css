@@ -677,3 +677,25 @@ box-shadow:0 8px 15px rgba(0,0,0,.15);
 transform:scale(.95);
 
 }
+.error-container{
+
+min-height:80vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+.error-container h1{
+
+font-size:5rem;
+
+color:#d84315;
+
+}
